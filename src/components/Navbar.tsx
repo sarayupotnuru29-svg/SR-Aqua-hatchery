@@ -55,21 +55,16 @@ const Navbar = () => {
                 key={link.to}
                 to={link.to}
                 className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                  location.pathname === link.to
-                    ? "bg-secondary text-secondary-foreground"
-                    : "text-primary-foreground/90 hover:bg-primary-foreground/10"
+                  link.to === "/contact"
+                    ? "ml-3 bg-secondary text-secondary-foreground font-semibold hover:bg-secondary/90"
+                    : location.pathname === link.to
+                      ? "bg-secondary text-secondary-foreground"
+                      : "text-primary-foreground/90 hover:bg-primary-foreground/10"
                 }`}
               >
                 {link.label}
               </Link>
             ))}
-            <a
-              href="tel:9000318188"
-              className="ml-3 flex items-center gap-2 bg-secondary text-secondary-foreground px-4 py-2 rounded-lg text-sm font-semibold hover:bg-secondary/90 transition-all"
-            >
-              <Phone className="w-4 h-4" />
-              Call Now
-            </a>
           </div>
 
           {/* Mobile Toggle */}
@@ -98,13 +93,6 @@ const Navbar = () => {
                 {link.label}
               </Link>
             ))}
-            <a
-              href="tel:9000318188"
-              className="mt-2 flex items-center gap-2 bg-secondary text-secondary-foreground px-4 py-3 rounded-lg text-sm font-semibold"
-            >
-              <Phone className="w-4 h-4" />
-              Call Now
-            </a>
           </div>
         )}
       </div>
