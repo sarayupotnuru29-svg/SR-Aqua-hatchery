@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Phone, Shield, Microscope, TrendingUp, Package } from "lucide-react";
+import { CheckCircle, Shield, Microscope, TrendingUp, Package } from "lucide-react";
 import shrimpLarvae from "@/assets/shrimp-larvae.jpg";
 import heroBg from "@/assets/hero-bg.jpg";
 
@@ -62,10 +62,7 @@ const Services = () => {
               </div>
 
               <Button asChild variant="hero" size="lg">
-                <a href="tel:9000318188" className="inline-flex items-center gap-2">
-                  <Phone className="w-4 h-4" />
-                  Call for Booking
-                </a>
+                <Link to="/contact">Contact Us</Link>
               </Button>
             </div>
             <div>
